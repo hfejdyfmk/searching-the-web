@@ -1,0 +1,15 @@
+<html>
+<head></head>
+<body>
+<form  style="text-align: center; " action="{% url 'Shakespeare:results' %}" method="post">
+{% csrf_token %}
+    <legend><h1>Search Shakespeare</h1></legend>
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+    <input type="text" name="keywords" size="30"> <input type="submit" value="Search">
+</form>
+</body>
+</html>
+
+
+<!--To make the tutorial shorter, all template examples use incomplete HTML.
+In your own projects you should use complete HTML documents.-->
