@@ -34,7 +34,7 @@ def detail(request, pk):
 
 def results(request):
     term_by_document = {}
-    with open("./.tmp/term_by_document.csv", 'r') as f:
+    with open("./Shakespeare/.data/term_by_document.csv", 'r') as f:
         rows = csv.DictReader(f)
         for row in rows:
             term_by_document.setdefault(row['term'], []).append(row['document'])
